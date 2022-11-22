@@ -1,0 +1,410 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../fonts/roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../fonts/roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Inter-Italic";
+  src: url("../fonts/roboto/Roboto-Italic.ttf");
+}
+/* FONTS */
+/* COLORS */
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 62px;
+  background-color: #1E1F25;
+}
+header nav {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  padding: 0 25px;
+}
+header nav > div {
+  display: flex;
+  height: 100%;
+  margin-left: auto;
+}
+header nav > div h3 {
+  color: #FFFFFF;
+  font: 14px/18px "Inter-Regular";
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 26px 0 0;
+  position: relative;
+}
+header nav > div h3::before {
+  background-color: #3A3C46;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 1px;
+}
+header nav > div button {
+  background-color: transparent;
+  border: transparent;
+  color: #FFFFFF;
+  cursor: pointer;
+  font: 14px/18px "Inter-Regular";
+  margin-left: 26px;
+  padding-left: 22px;
+  position: relative;
+}
+header nav > div button::before {
+  background: url("../images/the_wall_sprite_icon.svg") no-repeat -84px 0px;
+  content: "";
+  height: 13px;
+  left: 0;
+  margin-top: 1px;
+  position: absolute;
+  width: 13px;
+}
+main {
+  max-width: 978px;
+  margin: 0 auto;
+}
+main section h1 {
+  color: #FFFFFF;
+  display: block;
+  font: 21px/25px "Inter-Regular";
+  margin: 47px 0 55px 0;
+  position: relative;
+}
+main section h1 span {
+  color: #6D7186;
+  display: block;
+  font: 17.5px/21.5px "Inter-Regular";
+  margin: 6px 0 0 0;
+}
+main section > span {
+  margin-bottom: 16px;
+}
+main section form {
+  align-items: center;
+  background-color: #3A3C46;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px 20px;
+}
+main section form#post_form {
+  margin-bottom: 57px;
+}
+main section form::before {
+  color: #6D7186;
+  content: "Post your Topic...";
+  font: 16px/20px "Inter-Regular";
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+main section form textarea {
+  background-color: #3A3C46;
+  border: transparent;
+  color: #FFFFFF;
+  flex: 1;
+  font: 16px/20px "Inter-italic";
+  height: 100%;
+  outline: none;
+  position: relative;
+  resize: none;
+}
+main section form textarea:focus,
+main section form textarea.has_value {
+  z-index: 2;
+}
+main section form button {
+  background-color: #00A3FF;
+  border-radius: 8.86px;
+  border: 1px solid #00A3FF;
+  color: #FFFFFF;
+  cursor: pointer;
+  font: 14px/18px "Inter-Medium";
+  height: 38px;
+  margin-left: 20px;
+  width: 100px;
+}
+main section > span {
+  color: #FFFFFF;
+  display: block;
+  font: 16px/20px "Inter-Regular";
+}
+main section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main section #post_list li {
+  background-color: #1E1F25;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 10px 30px 31px;
+}
+main section #post_list li.post_item:last-child {
+  padding-bottom: 26px;
+}
+main section #post_list li .update_post_form {
+  margin: 18px 0 30px;
+}
+main section #post_list li .update_post_form::before {
+  content: "";
+}
+main section #post_list li .reply_form {
+  margin: 0 0 32px 16px;
+}
+main section #post_list li p {
+  color: #FFFFFF;
+  font: 16px/20px "Inter-italic";
+  margin-bottom: 12px;
+}
+main section #post_list li .post_details {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+main section #post_list li .post_details h4 {
+  color: #A3A3FF;
+  font: 14px/18px "Inter-Regular";
+  margin: 0 0 31px 0;
+}
+main section #post_list li .post_details h4 span {
+  padding-left: 20px;
+  position: absolute;
+  margin-left: 20px;
+}
+main section #post_list li .post_details h4 span::before {
+  background-color: #A3A3FF;
+  content: "";
+  height: 15px;
+  position: absolute;
+  width: 1px;
+  left: 0;
+}
+main section #post_list li .post_details .action_btn_wrapper {
+  align-items: center;
+  background-color: #1E1F25;
+  display: flex;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  bottom: 26px;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block {
+  align-items: center;
+  background-color: #1E1F25;
+  display: flex;
+  margin-left: 6px;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block .action_confirmation {
+  align-items: center;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #606066;
+  border-left: none;
+  color: #FFFFFF;
+  display: flex;
+  height: 27px;
+  opacity: 0;
+  padding: 0;
+  transition: 0.25s ease-in-out;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block .action_confirmation span,
+main section #post_list li .post_details .action_btn_wrapper .action_block .action_confirmation button {
+  display: none;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block .action_confirmation span {
+  font: 10px/14px "Inter-Medium";
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block .action_confirmation button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font: 10px/14px "Inter-Medium";
+  color: #A3A3FF;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block .action_confirmation button:nth-child(2) {
+  margin-left: 3px;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block .action_confirmation button:nth-child(3) {
+  padding-left: 2px;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block > button {
+  background: url("../images/the_wall_sprite_icon.svg") no-repeat 8px 7px, #32333C;
+  border-radius: 4px;
+  border: 1px solid #606066;
+  cursor: pointer;
+  height: 29px;
+  width: 29px;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block > button.remove_icon {
+  background-position: -13.5px 7px;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block:hover .action_confirmation {
+  display: flex;
+  transition: 0.25s ease-in-out;
+  opacity: 1;
+  padding: 0 8px;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block:hover .action_confirmation span,
+main section #post_list li .post_details .action_btn_wrapper .action_block:hover .action_confirmation button {
+  display: unset;
+}
+main section #post_list li .post_details .action_btn_wrapper .action_block:hover > button {
+  border-radius: 4px 0 0 4px;
+}
+main section #post_list li .reply_list .reply_data_item {
+  border-bottom: 1px solid #3F404A;
+  border-radius: 0;
+  margin: 11px 0 27px 16px;
+  padding: 0 0 25px 0;
+}
+main section #post_list li .reply_list .reply_data_item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+main section #post_list li .reply_list .reply_data_item p {
+  color: #9496A1;
+}
+main section #post_list li .reply_list .reply_data_item .post_details h4 {
+  margin-bottom: 0;
+}
+main section #post_list li .reply_list .reply_data_item .post_details .action_btn_wrapper {
+  bottom: 5px;
+}
+main section #post_list li .reply_list .reply_data_item .update_post_form {
+  margin-bottom: 10px;
+}
+main section #no_result {
+  align-items: center;
+  border-radius: 9px;
+  border: 1px dashed #6D6E75;
+  display: flex;
+  height: 89px;
+  justify-content: center;
+  margin-top: 48px;
+}
+main section #no_result span {
+  color: #FFFFFF;
+  font: 16px/20px "Inter-Regular";
+}
+@media screen and (max-width: 1020px) {
+  main {
+    max-width: unset;
+    width: 100%;
+  }
+  main section {
+    padding: 0 35px;
+  }
+}
+@media screen and (max-width: 719px) {
+  header {
+    height: 68px;
+    padding: 1px 20px 0;
+  }
+  header nav {
+    padding: 0;
+  }
+  header nav a img {
+    height: 28px;
+    width: 138px;
+  }
+  header nav > div h3 {
+    display: none;
+  }
+  header nav > div button {
+    overflow: hidden;
+    padding: 0 0 0 10px;
+    width: 13px;
+  }
+  main section h1 {
+    font: 20px/24px "Inter-Regular";
+    margin: 31px 0 15px 0;
+  }
+  main section h1 span {
+    font: 16px/20px "Inter-Regular";
+  }
+  main section form {
+    flex-direction: column;
+    height: unset;
+    justify-content: flex-start;
+    position: relative;
+  }
+  main section form#post_form {
+    margin-bottom: 28px;
+  }
+  main section form::before {
+    font: 14px/18px "Inter-Regular";
+    left: 20px;
+    top: 17px;
+  }
+  main section form textarea {
+    border-bottom: 1px solid #6D7186;
+    font: 14px/18px "Inter-Regular";
+    padding: 8px 0 0px;
+    width: 100%;
+  }
+  main section form button {
+    margin: 10px 0 0 auto;
+  }
+  main section > span {
+    margin-bottom: 8px;
+  }
+  main section #post_list li {
+    padding: 2px 20px 13px !important;
+  }
+  main section #post_list li p {
+    font: 14px/18px "Inter-italic";
+    margin-bottom: 7px;
+  }
+  main section #post_list li .update_post_form {
+    margin-top: 0;
+  }
+  main section #post_list li > .update_post_form {
+    margin-top: 19px;
+  }
+  main section #post_list li .post_details h4 {
+    font: 12px/16px "Inter-Regular";
+    margin-bottom: 27px;
+  }
+  main section #post_list li .post_details h4 span {
+    display: block;
+    font: 12px/16px "Inter-Regular";
+    margin-left: 0;
+    padding-left: 0;
+  }
+  main section #post_list li .post_details h4 span::before {
+    display: none;
+  }
+  main section #post_list li .post_details .action_btn_wrapper {
+    bottom: 11px;
+  }
+  main section #post_list li .reply_form {
+    margin-bottom: 19px;
+  }
+  main section #post_list li .reply_list .reply_data_item {
+    margin-bottom: 12px;
+    margin-top: 0;
+    padding: 1px 0 6px !important;
+  }
+  main section #post_list li .reply_list .reply_data_item p {
+    line-height: 14px;
+    margin-bottom: 2px;
+    margin-top: 0;
+  }
+  main section #post_list li .reply_list .reply_data_item .post_details .action_btn_wrapper {
+    bottom: 1px;
+  }
+}

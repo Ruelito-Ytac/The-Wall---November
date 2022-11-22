@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../fonts/roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../fonts/roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Inter-Italic";
+  src: url("../fonts/roboto/Roboto-Italic.ttf");
+}
+/* FONTS */
+/* COLORS */

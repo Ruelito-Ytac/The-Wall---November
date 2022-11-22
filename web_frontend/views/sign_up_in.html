@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the wall sign up/in.">
+    <title>The Wall Sign Up/In</title>
+
+    <link rel="shortcut icon" href="../assets/images/the_wall_favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/sign_in_up.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+</head>
+<body>
+    <section id="sign_wrapper">
+        <div id="form_wrapper">
+            <h1>Welcome, <span>Login your account.</span></h1>
+            <form action="#" id="sign_in_form" class="sign_up_in_form_wrapper" method="POST" autocomplete="off">
+                <label for="email">
+                    <span>Email</span>
+                    <input type="email" id="email" name="email" class="required_input" placeholder="Email...">
+                </label>
+                <label for="password">
+                    <span>Password</span>
+                    <input type="password" id="password" name="password" class="required_input" placeholder="Password...">
+                </label>
+                <button type="submit">Sign In</button>
+                <p>Don’t have an account? <span class="sign_up_in_btn">Sign up</span></p>
+            </form>
+            <form action="#" id="sign_up_form" class="sign_up_in_form_wrapper hidden" method="POST" autocomplete="off">
+                <div>
+                    <label for="first_name">
+                        <span>First Name</span>
+                        <input type="text" id="first_name" name="first_name" class="required_input" placeholder="First Name...">
+                    </label>
+                    <label for="last_name">
+                        <span>Last Name</span>
+                        <input type="password" id="last_name" name="last_name" class="required_input" placeholder="Last Name...">
+                    </label>
+                </div>
+                <label for="email_sign_up">
+                    <span>Email</span>
+                    <input type="email" id="email_sign_up" name="email" class="required_input" placeholder="Email...">
+                </label>
+                <label for="password_sign_up">
+                    <span>Password</span>
+                    <input type="password" id="password_sign_up" name="password" class="required_input" placeholder="Password...">
+                </label>
+                <button type="submit">Sign up</button>
+                <p>Already have an account? <span class="sign_up_in_btn">Login</span></p>
+            </form>
+        </div>
+
+        <div id="right_panel">
+            <img src="../assets/images/the_wall_big_logo.svg" alt="The Wall Big Logo">
+        </div>
+    </section>
+
+    <script src="../assets/js/constant.js"></script>
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/sign_up_in.js"></script>
+</body>
+</html>

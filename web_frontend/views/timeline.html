@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Wall Timeline">
+    <title>The Wall Timeline</title>
+
+    <link rel="shortcut icon" href="../assets/images/the_wall_favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/timeline.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./timeline.html"><img src="../assets/images/the_wall_small_logo.svg" alt="The Wall Small Logo"></a>
+
+            <div>
+                <h3 class="test">Ruelito Ytac</h3>
+                <button type="button" id="logout_btn">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Hello Ruelito, <span>Welcome to V88 Forum Dashboard</span></h1>
+
+            <form action="#" id="post_form" method="POST" autocomplete="off">
+                <textarea name="post_item" id="post_item"></textarea>
+                <button type="submit">Post</button>
+            </form>
+
+            <span>Recent Forums</span>
+
+            <ul id="post_list">
+            </ul>
+
+            <div id="no_result">
+                <span>No post yet.</span>
+            </div>
+        </section>
+    </main>
+
+    <div id="clone_block" class="hidden">
+        <ul>
+            <li class="post_item">
+                <p class="post_message"></p>
+                
+                <div class="post_details">
+                    <h4>Ruelito Ytac (few seconds ago) <span class="count_response">0 Responses</span></h4>
+
+                    <div class="action_btn_wrapper">
+                        <div class="action_block">
+                            <button type="button" class="update_icon"></button>
+
+                            <div class="update_item action_confirmation">
+                                <span>Confirm Update?</span>
+
+                                <button type="button" class="no_btn">No</button>
+                                <button type="button" class="yes_btn">Yes</button>
+                            </div>
+                        </div>
+
+                        <div class="action_block">
+                            <button type="button" class="remove_icon"></button>
+
+                            <div class="delete_item action_confirmation">
+                                <span>Confirm Delete?</span>
+
+                                <button type="button" class="no_btn">No</button>
+                                <button type="button" class="yes_btn">Yes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="#" method="POST" class="update_post_form hidden" onsubmit="preventSubmit(event)">
+                    <textarea name="update_post_item" class="update_input_item"></textarea>
+                    <button type="submit" class="update_changes">Save</button>
+                </form>
+
+                <form action="#" method="POST" class="reply_form" onsubmit="preventSubmit(event)">
+                    <textarea name="reply_item" class="reply_item"></textarea>
+                    <button type="submit" class="submit_reply_btn">Comment</button>
+                </form>
+
+                <ul class="reply_list">
+                </ul>
+            </li>
+            <li class="reply_data_item">
+                <p class="post_message"></p>
+        
+                <div class="post_details">
+                    <h4>Ruelito Ytac (few seconds ago)</h4>
+
+                    <div class="action_btn_wrapper">
+                        <div class="action_block">
+                            <button type="button" class="update_icon"></button>
+
+                            <div class="update_item action_confirmation">
+                                <span>Confirm Update?</span>
+
+                                <button type="button" class="no_btn">No</button>
+                                <button type="button" class="yes_btn">Yes</button>
+                            </div>
+                        </div>
+
+                        <div class="action_block">
+                            <button type="button" class="remove_icon"></button>
+
+                            <div class="delete_item action_confirmation">
+                                <span>Confirm Delete?</span>
+
+                                <button type="button" class="no_btn">No</button>
+                                <button type="button" class="yes_btn">Yes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="#" method="POST" class="update_post_form hidden" onsubmit="preventSubmit(event)">
+                    <textarea name="update_post_item" class="update_input_item"></textarea>
+                    <button type="submit" class="update_changes">Save</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <script src="../assets/js/constant.js"></script>
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/timeline.js"></script>
+</body>
+</html>

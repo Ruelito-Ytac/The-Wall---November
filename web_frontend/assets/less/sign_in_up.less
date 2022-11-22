@@ -1,0 +1,130 @@
+@import url("./variables.less");
+
+body{
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+#sign_wrapper{
+    background-color: @login_bg_color;
+    border-radius: 20px;
+    display: flex;
+    min-height: 671;
+    width: 876px;
+
+    #form_wrapper{
+        padding: 51px 78px 72px;
+        width: 100%;
+
+        h1{
+            color: @white;
+            display: block;
+            font: 21px/25px @font_regular;
+            margin-bottom: 45px;
+            padding-left: 76px;
+            position: relative;
+
+            span{
+                color: @gray;
+                display: block;
+                font: 17.5px/21.5px @font_regular;
+                margin: 3px 0 0 0;
+            }
+
+            &::before{
+                content: "";
+                width: 46px;
+                height: 46px;
+                background: url("../images/the_wall_icon.svg") no-repeat;
+                position: absolute;
+                left: 0;
+                top: 3px;
+            }
+        }
+    
+        form{
+            display: flex;
+            flex-direction: column;
+
+            >div{
+                display: flex;
+
+                label{
+                    flex: 1;
+
+                    &:first-child{
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            >label{
+                width: 100%;
+            }
+
+            label{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 17px;
+
+                span{
+                    color: @gray;
+                    font: 14px/18px @font_regular;
+                    margin-bottom: 7px;
+                }
+
+                input{
+                    background-color: @input_bg;
+                    border-radius: 9px;
+                    border: 1px solid @input_bg;
+                    color: @white;
+                    font: 16px/20px @font_regular;
+                    height: 60px;
+                    padding: 0 19px;
+                    outline: none;
+                }
+            }
+
+            button{
+                background-color: @blue;
+                border-radius: 9px;
+                border: 1px solid @blue;
+                color: @white;
+                cursor: pointer;
+                font: 21px/25px @font_bold;
+                height: 60px;
+                margin-top: 13px;
+                outline: none;
+            }
+
+            p{
+                color: @gray;
+                font: 17.5px/21.5px @font_regular;
+                margin: 36px 0 0 0;
+                text-align: center;
+
+                span{
+                    color: @blue;
+                    cursor: pointer;
+                    font: 17.5px/21.5px @font_regular;
+                }
+            }
+        }
+    }
+
+
+    #right_panel{
+        background: url("../images/right_panel_bg.svg") no-repeat, @right_panel_color;
+        border-radius: 0 20px 20px 0;
+        margin-left: auto;
+        max-width: 205px;
+        min-width: 205px;
+        width: 205px;
+
+        img{
+            margin: 75px 0 0 51px;
+        }
+    }
+}
